@@ -1,8 +1,10 @@
 import jwt from  'jwt-simple';
 import moment from 'moment';
+import dotenv from 'dotenv';
 
+dotenv.config();
 // Clave secreta
-const secret = 'SECRET_KEY_pRoJeCt_Socail_Network_';
+const secret = process.env.SECRET_KEY;
 
 // Generar token
 const createToken = (user) => {
