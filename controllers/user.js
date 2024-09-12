@@ -199,7 +199,7 @@ export const listUsers= async (req, res) =>{
     /* gestión de páginas y control de las mismas*/
     let page = req.params.page ? parseInt(req.params.page, 10) :1;
     // configuración items de página
-    let itemsPerPage = req.query.limit ? parseInt(req.query.limit, 10): 2;
+    let itemsPerPage = req.query.limit ? parseInt(req.query.limit, 10): 10;
 
     // Acá se reliza la consulta páginada
     const options = {
@@ -295,7 +295,7 @@ export const updateUser = async (req, res) => {
 
     // Devolver la respuesta exitosa
     return res.status(200).send({
-      status: "sucess",
+      status: "success",
       message: "Usuario actualizado correctamente",
       user: userUpdated
     });
