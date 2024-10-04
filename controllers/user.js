@@ -2,6 +2,8 @@ import User from "../models/users.js";
 import bcrypt from "bcrypt";
 import { createToken } from "../services/jwt.js";
 import { followThisUser } from "../services/followServices.js";
+import fs from 'fs';
+import path from 'path';
 
 
 // Método de prueba
